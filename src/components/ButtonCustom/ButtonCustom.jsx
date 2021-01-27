@@ -6,9 +6,10 @@ import { Button, makeStyles, useTheme } from '@material-ui/core'
 
 
 const useStyles = makeStyles((theme) => ({
-    shadow: {
-        boxShadow: theme.shadows[0]
+    custom: {
+        boxShadow: theme.shadows[0],
     },
+    
 }))
 
 const ButtonCustom = ({typeIcon='', icon=null, color, size, variant, children}) => {
@@ -18,7 +19,7 @@ const ButtonCustom = ({typeIcon='', icon=null, color, size, variant, children}) 
 
     return (
        <Button
-       className={classNames('btn', classes.shadow, )}
+       className={classNames('btn', classes.custom, )}
         color={color}
         variant={variant}
         size={size}
